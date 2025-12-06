@@ -1,0 +1,20 @@
+{
+  "message": {
+    "hello": "hello from the file",
+    "search": {
+      "title": {
+        "dashboard": "ダッシュボード",
+        "kanban_board": "カンバンボード",
+        "requirement": "要件",
+        "project": "プロジェクト",
+        "task": "タスク"
+      }
+    },
+    "hello_world": "Hello World"
+  },
+  "search": {
+    "destination": "search-destination-file",
+    "project": "search-project-silly-file"
+  },
+  "hello_world": "日本からこんにちは世界"
+}
