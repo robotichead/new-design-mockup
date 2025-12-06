@@ -40,7 +40,7 @@ onMounted(() => {
 <style scoped>
 .main {
     min-height: calc(100dvh - 65px);
-    background-color: var(--bg-light);
+    background-color: var(--bg-dark);
     padding-top: 20px;
 }
 

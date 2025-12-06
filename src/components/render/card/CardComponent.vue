@@ -12,8 +12,6 @@
     margin: auto;
     padding: 1rem 2rem;
     border-radius: var(--border-radius);
-    border-style: var(--border-style);
-    border-width: var(--border-width);
-    border-color: var(--border);
+	background-color: var(--bg-light);
 }
 </style>

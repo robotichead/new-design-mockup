@@ -18,24 +18,39 @@ const groupModel = defineModel('groupModel', {
     default: '',
 });
 
+// Define data
+const fieldValidation : Record<string, boolean> = {
+	"titleModel": false,
+}
+
 // Define Refs
+const isFormValid = ref(true);
 const objectState = ref(ObjectStateEnum.NoAction);
-const isTitleModelValid = ref(false);
 
 // Define Methods
-async function createProject() {
+async function createProject() : Promise<void> {
     // Check the validation
-    // TODO - Figure out a better method to this
+	isFormValid.value = await checkValidation();
 
-    // Do we wait for a tick?
-    await nextTick();
+	// Break out of save if form is not valid
+	if (!isFormValid.value) {
+		return;
+	}
 
-    if (!isTitleModelValid.value) {
-        alert("YEP! Not valid mate")
-        return;
-    }
-
+	// Save the form
     objectState.value = ObjectStateEnum.Saving;
+}
+
+// Move this to utils/composition as it'll be used everywhere
+async function checkValidation() : Promise<boolean> {
+	// Await for a tick - make sure everything has settled
+	await nextTick();
+
+	// Loop through the field validation and find any falses
+	return Object.entries(fieldValidation).some((value) => {
+		console.log("Value: ", value);
+		return !value;
+	})
 }
 </script>
 
@@ -46,11 +61,14 @@ async function createProject() {
             description="Fill in the details below to start your new project" />
 
         <TextInputComponent
-            title="Title"
-            :isRequired="true"
-            v-model="titleModel"
-            @isValid="(args) => (isTitleModelValid = args)"
-            />
+			v-model="titleModel"
+			:isRequired="true"
+			:maxLength="20"
+			:minLength="10"
+			placeholderText="Your project title"
+			title="Title"
+			@isValid="(value) => (fieldValidation['titleModel'] = value)"
+		/>
         <TextInputComponent
             v-model="groupModel"
             title="Group Permissions" />

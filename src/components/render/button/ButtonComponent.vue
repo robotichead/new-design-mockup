@@ -10,6 +10,7 @@ const props = defineProps({
     },
     objectState: {
         required: true,
+		// This is broken - the value does not translate back into the object state
         validator: function (value: string): boolean {
             return value in ObjectStateEnum;
         },
