@@ -1,4 +1,3 @@
-import { loadLocaleMessages, default as i18n } from '@/i18n';
 import { createRouter, createWebHistory } from 'vue-router';
 
 // Async components
@@ -84,15 +83,6 @@ const routes = [
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
     routes: routes,
-});
-
-router.beforeEach(async (to, from, next) => {
-    const locale = i18n.global.locale.value;
-    if (locale && locale !== i18n.global.locale.value) {
-        await loadLocaleMessages(locale);
-        i18n.global.locale.value = locale;
-    }
-    next();
 });
 
 export { routes };
