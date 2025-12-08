@@ -48,7 +48,6 @@ async function checkValidation() : Promise<boolean> {
 
 	// Loop through the field validation and find any falses
 	return Object.entries(fieldValidation).some((value) => {
-		console.log("Value: ", value);
 		return !value;
 	})
 }

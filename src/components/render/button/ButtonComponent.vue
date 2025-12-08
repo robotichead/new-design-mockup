@@ -12,15 +12,17 @@ const props = defineProps({
         required: true,
 		// This is broken - the value does not translate back into the object state
         validator: function (value: string): boolean {
-            return value in ObjectStateEnum;
+			const enumValues : string[] = Object.values(ObjectStateEnum);
+			return enumValues.includes(value);
         },
     },
     variant: {
         required: false,
-        default: 'primary',
-        validator(value: string): boolean {
-            return value in ButtonVariantEnum;
-        },
+        default: ButtonVariantEnum.Primary,
+		validator: function (value: string): boolean {
+			const enumValues : string[] = Object.values(ButtonVariantEnum);
+			return enumValues.includes(value);
+		},
     },
 });
 
