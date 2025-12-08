@@ -4,12 +4,16 @@ import NavComponent from '@/components/nav/NavComponent.vue';
 import SkipLinks from '@/components/skip_links/SkipLinks.vue';
 import { useNavStore } from '@/stores/nav.ts';
 import { computed, onMounted } from 'vue';
+import { useLocale } from "vue-intlayer";
 
 // Stores
 const navStore = useNavStore();
 
 // Computed
 const mainClass = computed(() => (navStore.isNavOpen ? 'main nav-open' : 'main'));
+
+// i18n
+const { setLocale } = useLocale();
 
 // On Mounted
 onMounted(() => {
@@ -18,9 +22,9 @@ onMounted(() => {
         navStore.toggleNav();
     }
 
-    // Toggle the language of the page
-    // document.head.lang = 'es'
-    // Not implemented at page load - default to 'en'. Will update once the system gets the user's details.
+	// Setup i18n for application
+	const locale : string = document.documentElement.lang ?? 'en';
+	setLocale(locale);
 });
 </script>
 
