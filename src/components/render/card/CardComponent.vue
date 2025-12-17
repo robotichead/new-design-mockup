@@ -1,4 +1,5 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+</script>
 
 <template>
   <div class="card">
@@ -10,8 +11,16 @@
 .card {
   max-width: var(--max-card-width);
   margin: auto;
-  padding: 1rem 2rem;
   border-radius: var(--border-radius);
   background-color: var(--bg-light);
+	padding: 0.25rem 0.5rem;
+
+	@media (--medium-screen) {
+		padding: 0.5rem 1rem;
+	}
+
+	@media (--large-screen) {
+		padding: 1rem 2rem;
+	}
 }
 </style>

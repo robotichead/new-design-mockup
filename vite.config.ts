@@ -15,7 +15,7 @@ export default defineConfig({
                 postcssNesting,
                 postcssGlobalData({
                     files: [
-                        './src/assets/css/_media_variables.css',
+                        './src/styles/variables/_media_variables.css',
                     ]
                 }),
                 postcssCustomMedia,

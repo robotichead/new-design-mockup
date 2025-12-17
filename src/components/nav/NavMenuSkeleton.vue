@@ -10,11 +10,11 @@ const props = defineProps({
 </script>
 
 <template>
-  <div v-for="index in props.count" :key="index" class="skeleton">
+  <li v-for="index in props.count" :key="index" class="skeleton">
     <div class="skeleton--loader-circle">
       <Ellipsis :size="18" />
     </div>
-  </div>
+  </li>
 </template>
 
 <style scoped>

@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import CardComponent from "@/components/render/card/CardComponent.vue";
+import CardHeader from "@/components/render/card/CardHeader.vue";
 import { computed } from "vue";
 
 const objectType = computed(() => {
@@ -9,8 +11,10 @@ const objectType = computed(() => {
 </script>
 
 <template>
-  <h1 id="main-title">404 Not Found</h1>
-  <p>Sorry, we could not find the object {{ objectType }}</p>
+	<CardComponent>
+		<CardHeader title="404 Not Found" />
+		<p>Sorry, we could not find the object {{ objectType }}</p>
+	</CardComponent>
 </template>
 
 <style scoped></style>

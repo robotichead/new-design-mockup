@@ -1,17 +1,17 @@
 import { createRouter, createWebHistory } from "vue-router";
 
 // Async components
-const Dashboard = () => import("@/components/dashboard/dashboard_page/DashboardPage.vue");
+const DashboardPage = () => import("@/components/dashboard/dashboard_page/DashboardPage.vue");
 const NewProject = () => import("@/components/project/NewProject.vue");
-const NotFound = () => import("@/components/error/NotFoundPage/NotFoundPage.vue");
-const Project = () => import("@/components/project/ProjectInformation.vue");
-const Search = () => import("@/components/search/SearchPage.vue");
+const NotFoundPage = () => import("@/components/error/NotFoundPage/NotFoundPage.vue");
+const ProjectPage = () => import("@/components/project/ProjectInformation.vue");
+const SearchPage = () => import("@/components/search/SearchPage.vue");
 
 // Define the routes
 const routes = [
   {
     path: "/",
-    component: Dashboard,
+    component: DashboardPage,
     name: "Dashboard",
     meta: {
       destination: "dashboard",
@@ -23,9 +23,9 @@ const routes = [
       destination: "project",
     },
     children: [
-      { path: "", component: Search, name: "SearchProject" },
+      { path: "", component: SearchPage, name: "SearchProject" },
       { path: "new", component: NewProject, name: "NewProject" },
-      { path: ":id", component: Project, name: "Project" },
+      { path: ":id", component: ProjectPage, name: "Project" },
     ],
   },
   {
@@ -34,9 +34,9 @@ const routes = [
       destination: "kanban_board",
     },
     children: [
-      { path: "", component: Search, name: "SearchKanbanBoard" },
-      { path: "new", component: Search, name: "NewKanbanBoard" },
-      { path: ":id", component: Search, name: "KanbanBoard" },
+      { path: "", component: DashboardPage, name: "SearchKanbanBoard" },
+      { path: "new", component: DashboardPage, name: "NewKanbanBoard" },
+      { path: ":id", component: DashboardPage, name: "KanbanBoard" },
     ],
   },
   {
@@ -45,9 +45,9 @@ const routes = [
       destination: "requirement",
     },
     children: [
-      { path: "", component: Search, name: "SearchRequirement" },
-      { path: "new", component: Search, name: "NewRequirement" },
-      { path: ":id", component: Search, name: "Requirement" },
+      { path: "", component: DashboardPage, name: "SearchRequirement" },
+      { path: "new", component: DashboardPage, name: "NewRequirement" },
+      { path: ":id", component: DashboardPage, name: "Requirement" },
     ],
   },
   {
@@ -56,9 +56,9 @@ const routes = [
       destination: "task",
     },
     children: [
-      { path: "", component: Search, name: "SearchTask" },
-      { path: "new", component: Search, name: "NewTask" },
-      { path: ":id", component: Search, name: "Task" },
+      { path: "", component: DashboardPage, name: "SearchTask" },
+      { path: "new", component: DashboardPage, name: "NewTask" },
+      { path: ":id", component: DashboardPage, name: "Task" },
     ],
   },
   {
@@ -67,15 +67,15 @@ const routes = [
       destination: "request_for_change",
     },
     children: [
-      { path: "", component: Search, name: "SearchRequestForChange" },
-      { path: "new", component: Search, name: "NewRequestForChange" },
-      { path: ":id", component: Search, name: "RequestForChange" },
+      { path: "", component: DashboardPage, name: "SearchRequestForChange" },
+      { path: "new", component: DashboardPage, name: "NewRequestForChange" },
+      { path: ":id", component: DashboardPage, name: "RequestForChange" },
     ],
   },
   // Fall back page
   {
     path: "/:catchAll(.*)*",
-    component: NotFound,
+    component: NotFoundPage,
   },
 ];
 

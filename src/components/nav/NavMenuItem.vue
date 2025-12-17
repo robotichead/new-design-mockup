@@ -1,3 +1,4 @@
+<!-- NavMenuItem -->
 <script setup lang="ts">
 import { useNavStore } from "@/stores/nav/nav.ts";
 import { Plus } from "lucide-vue-next";
@@ -60,14 +61,14 @@ const defineClass = computed(() => {
 // Method
 function closeMenu(): void {
   // If use is in mobile mode, close the window
-  if (window.innerWidth < 640) {
+  if (window.innerWidth < 1280) {
     navStore.toggleNav();
   }
 }
 </script>
 
 <template>
-  <div :class="defineClass">
+  <li :class="defineClass">
     <RouterLink
       class="nav-bar--menu--item-search"
       :to="props.routeAddress"
@@ -90,7 +91,7 @@ function closeMenu(): void {
       </span>
       <span class="hidden-visually">Create new {{ destination }}</span>
     </RouterLink>
-  </div>
+  </li>
 </template>
 
 <style scoped>
@@ -111,7 +112,7 @@ function closeMenu(): void {
 .nav-bar--menu--item-search,
 .nav-bar--menu--item-new {
   text-decoration: none;
-  color: grey;
+  color: var(--text-muted);
   padding: 10px;
 }
 

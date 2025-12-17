@@ -73,16 +73,16 @@ nav {
   padding: 0;
   width: calc(100vw - 16px);
   margin: auto;
-  font-size: 24px;
-  line-height: 32px;
+  font-size: 1.5rem;
+  line-height: 2rem;
   font-weight: 500;
   font-family: "Open Sans", sans-serif;
   font-style: normal;
 
   @media (--small-screen) {
     width: 243px;
-    font-size: 18px;
-    line-height: 24px;
+    font-size: 1.125rem;
+    line-height: 1.5rem;
   }
 }
 

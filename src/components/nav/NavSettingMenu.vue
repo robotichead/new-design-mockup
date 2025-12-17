@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { MenuItemInterface } from "@/components/nav/MenuItemInterface.ts";
+import type { MenuItemInterface } from "@/utils/interfaces/MenuItemInterface.ts";
 // Icons
 import { Cog, LogOut } from "lucide-vue-next";
 import { ref } from "vue";

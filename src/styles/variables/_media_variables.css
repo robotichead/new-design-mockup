@@ -2,6 +2,11 @@
  * Small screens will have a screen size of 640px or larger
  * Medium screen will have a screen size of 768px or larger
  * etc.
+ *
+ * Small screens are considered mobile phones
+ * Medium screens are considered tables
+ * Large screens are considered laptops
+ * etc.
  */
 @custom-media --small-screen (min-width: 640px);
 @custom-media --medium-screen (min-width: 768px);

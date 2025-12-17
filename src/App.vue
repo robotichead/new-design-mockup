@@ -16,7 +16,7 @@ const mainClass = computed(() =>
 // On Mounted
 onMounted(() => {
   // If user is on mobile, the menu will not appear by default
-  if (window.innerWidth < 640) {
+  if (window.innerWidth < 1280) {
     navStore.toggleNav();
   }
 });
@@ -33,13 +33,17 @@ onMounted(() => {
 
 <style scoped>
 .main {
-  min-height: calc(100dvh - 65px);
+  min-height: calc(100dvh - 60px);
   background-color: var(--bg-dark);
-  padding-top: 20px;
+
+	@media (--medium-screen) {
+		min-height: calc(100dvh - 65px);
+		padding-top: 20px;
+	}
 }
 
 .main.nav-open {
-  @media (--small-screen) {
+  @media (--x-large-screen) {
     margin-left: 263px;
   }
 }
