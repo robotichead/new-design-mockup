@@ -1,37 +1,37 @@
 <script setup lang="ts">
-import type { MenuItemInterface } from '@/components/nav/MenuItemInterface.ts';
+import type { MenuItemInterface } from "@/components/nav/MenuItemInterface.ts";
 // Icons
-import { Cog, LogOut } from 'lucide-vue-next';
-import { ref } from 'vue';
-import NavMenuItem from './NavMenuItem.vue';
+import { Cog, LogOut } from "lucide-vue-next";
+import { ref } from "vue";
+import NavMenuItem from "./NavMenuItem.vue";
 
 // Data
 const navSettingMenu = ref<MenuItemInterface[]>([]);
 
 // Computed
 const fetchNavSettingMenuItems = async () => {
-    return new Promise<MenuItemInterface[]>((resolve) => {
-        setTimeout(() => {
-            resolve([
-                {
-                    ariaLabel: 'Go to NearBeach Settings',
-                    destination: 'settings',
-                    icon: Cog,
-                    route: '/settings',
-                    routeNew: '',
-                    title: 'Settings',
-                },
-                {
-                    ariaLabel: 'Logout of NearBeach',
-                    destination: 'logout',
-                    icon: LogOut,
-                    route: '/logout',
-                    routeNew: '',
-                    title: 'Logout',
-                },
-            ]);
-        });
+  return new Promise<MenuItemInterface[]>((resolve) => {
+    setTimeout(() => {
+      resolve([
+        {
+          ariaLabel: "Go to NearBeach Settings",
+          destination: "settings",
+          icon: Cog,
+          route: "/settings",
+          routeNew: "",
+          title: "Settings",
+        },
+        {
+          ariaLabel: "Logout of NearBeach",
+          destination: "logout",
+          icon: LogOut,
+          route: "/logout",
+          routeNew: "",
+          title: "Logout",
+        },
+      ]);
     });
+  });
 };
 
 // Async
@@ -39,17 +39,17 @@ navSettingMenu.value = await fetchNavSettingMenuItems();
 </script>
 
 <template>
-    <NavMenuItem
-        v-for="menuItem in navSettingMenu"
-        v-bind:destination="menuItem.destination"
-        v-bind:override-aria-label="menuItem.ariaLabel"
-        v-bind:route="menuItem.route"
-        v-bind:routeNew="menuItem.routeNew"
-        v-bind:title="menuItem.title">
-        <component
-            :is="menuItem.icon"
-            :size="14" />
-    </NavMenuItem>
+  <NavMenuItem
+    v-for="menuItem in navSettingMenu"
+    :key="menuItem.destination"
+    :destination="menuItem.destination"
+    :override-aria-label="menuItem.ariaLabel"
+    :route="menuItem.route"
+    :routeNew="menuItem.routeNew"
+    :title="menuItem.title"
+  >
+    <component :is="menuItem.icon" :size="14" />
+  </NavMenuItem>
 </template>
 
 <style scoped></style>
