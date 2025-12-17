@@ -1,9 +1,9 @@
 import { createRouter, createWebHistory } from "vue-router";
 
 // Async components
-const Dashboard = () => import("@/components/dashboard/DashboardPage.vue");
+const Dashboard = () => import("@/components/dashboard/dashboard_page/DashboardPage.vue");
 const NewProject = () => import("@/components/project/NewProject.vue");
-const NotFound = () => import("@/components/error/NotFound.vue");
+const NotFound = () => import("@/components/error/NotFoundPage/NotFoundPage.vue");
 const Project = () => import("@/components/project/ProjectInformation.vue");
 const Search = () => import("@/components/search/SearchPage.vue");
 

@@ -2,7 +2,7 @@
 import NavMenu from "@/components/nav/NavMenu.vue";
 import NavMenuSkeleton from "@/components/nav/NavMenuSkeleton.vue";
 import NavSettingMenu from "@/components/nav/NavSettingMenu.vue";
-import { useNavStore } from "@/stores/nav.ts";
+import { useNavStore } from "@/stores/nav/nav.ts";
 import { computed } from "vue";
 
 // Stores

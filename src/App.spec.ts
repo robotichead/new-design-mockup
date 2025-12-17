@@ -1,6 +1,6 @@
 // App.spec.ts
-import { routes } from "@/router";
-import { useNavStore } from "@/stores/nav.ts";
+import { routes } from "@/router/router.ts"
+import { useNavStore } from "@/stores/nav/nav.ts";
 import { mount } from "@vue/test-utils";
 import { setActivePinia, createPinia } from "pinia";
 import { describe, test, expect, beforeEach } from "vitest";

@@ -46,18 +46,10 @@ async function checkValidation(): Promise<boolean> {
   // Await for a tick - make sure everything has settled
   await nextTick();
 
-<<<<<<< HEAD
 	// Loop through the field validation and find any falses
 	return Object.entries(fieldValidation).some((value) => {
 		return !value;
 	})
-=======
-  // Loop through the field validation and find any falses
-  return Object.entries(fieldValidation).some((value) => {
-    console.log("Value: ", value);
-    return !value;
-  });
->>>>>>> 1463a9e (Updates to unit testing and other linting issues)
 }
 </script>
 

@@ -1,7 +1,7 @@
 // stores/nav.spec.ts
 import { setActivePinia, createPinia } from "pinia";
 import { describe, test, expect, beforeEach } from "vitest";
-import { useNavStore } from "./nav";
+import { useNavStore } from "./nav.ts";
 
 describe('Nav - check "toggleNav" action works', () => {
   beforeEach(() => {

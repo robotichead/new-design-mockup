@@ -2,6 +2,8 @@
 import { computed } from "vue";
 
 const objectType = computed(() => {
+	// TODO - Add in router to find what item they are trying to search
+	// TODO - Add unit tests around above todo
   return "unknown";
 });
 </script>

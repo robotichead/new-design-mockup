@@ -2,7 +2,7 @@
 import HeaderComponent from "@/components/header/HeaderComponent.vue";
 import NavComponent from "@/components/nav/NavComponent.vue";
 import SkipLinks from "@/components/skip_links/SkipLinks.vue";
-import { useNavStore } from "@/stores/nav.ts";
+import { useNavStore } from "@/stores/nav/nav.ts";
 import { computed, onMounted } from "vue";
 
 // Stores
@@ -19,10 +19,6 @@ onMounted(() => {
   if (window.innerWidth < 640) {
     navStore.toggleNav();
   }
-
-  // Toggle the language of the page
-  // document.head.lang = 'es'
-  // Not implemented at page load - default to 'en'. Will update once the system gets the user's details.
 });
 </script>
 

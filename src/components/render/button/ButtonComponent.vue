@@ -8,13 +8,6 @@ const props = defineProps({
     type: String,
     required: true,
   },
-  objectState: {
-    required: true,
-    // This is broken - the value does not translate back into the object state
-    validator: function (value: string): boolean {
-      return value in ObjectStateEnum;
-    },
-<<<<<<< HEAD
     objectState: {
         required: true,
 		// This is broken - the value does not translate back into the object state
@@ -30,16 +23,7 @@ const props = defineProps({
 			const enumValues : string[] = Object.values(ButtonVariantEnum);
 			return enumValues.includes(value);
 		},
-=======
-  },
-  variant: {
-    required: false,
-    default: "primary",
-    validator(value: string): boolean {
-      return value in ButtonVariantEnum;
->>>>>>> 1463a9e (Updates to unit testing and other linting issues)
     },
-  },
 });
 
 const buttonText = computed(() => {
@@ -62,7 +46,7 @@ const buttonText = computed(() => {
 });
 
 const classAttributes = computed(() => {
-  let class_attribute = props.variant;
+  let class_attribute = props.variant.toString();
 
   switch (props.objectState) {
     case ObjectStateEnum.Loading:

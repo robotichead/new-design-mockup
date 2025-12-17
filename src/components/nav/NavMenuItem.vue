@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useNavStore } from "@/stores/nav.ts";
+import { useNavStore } from "@/stores/nav/nav.ts";
 import { Plus } from "lucide-vue-next";
 import { computed } from "vue";
 import { useRoute } from "vue-router";
@@ -46,7 +46,7 @@ const defineClass = computed(() => {
 
   // If the route is the same as the props route - we are currently on that route
   isActive =
-    isActive || route?.path?.toLowerCase() === props.routeAddress.toLowerCase();
+    isActive || route?.path?.toLowerCase() === props.routeAddress?.toLowerCase();
 
   // If the route is the same as the props routeNew - we are currently on that route
   isActive =

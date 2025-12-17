@@ -44,8 +44,8 @@ navSettingMenu.value = await fetchNavSettingMenuItems();
     :key="menuItem.destination"
     :destination="menuItem.destination"
     :override-aria-label="menuItem.ariaLabel"
-    :route="menuItem.route"
-    :routeNew="menuItem.routeNew"
+    :routeAddress="menuItem.route"
+    :routeAddressNew="menuItem.routeNew"
     :title="menuItem.title"
   >
     <component :is="menuItem.icon" :size="14" />
