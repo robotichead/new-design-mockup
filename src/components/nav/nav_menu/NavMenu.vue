@@ -1,7 +1,7 @@
 <script setup lang="ts">
 // Types
 import type { MenuItemInterface } from "@/utils/interfaces/MenuItemInterface.ts";
-import NavMenuItem from "@/components/nav/NavMenuItem.vue";
+import NavMenuItem from "@/components/nav/nav_menu/nav_menu_item/NavMenuItem.vue";
 // Icons
 import {
   LayoutDashboard,

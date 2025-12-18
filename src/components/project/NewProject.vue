@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import ButtonComponent from "@/components/render/button/ButtonComponent.vue";
-import CardComponent from "@/components/render/card/CardComponent.vue";
-import CardFooter from "@/components/render/card/CardFooter.vue";
-import CardHeader from "@/components/render/card/CardHeader.vue";
-import TextInputComponent from "@/components/render/text_input/TextInputComponent.vue";
+import ButtonComponent from "@/components/prefab/button/ButtonComponent.vue";
+import CardComponent from "@/components/prefab/card/CardComponent.vue";
+import CardFooter from "@/components/prefab/card/CardFooter.vue";
+import CardHeader from "@/components/prefab/card/CardHeader.vue";
+import TextInputComponent from "@/components/prefab/text_input/TextInputComponent.vue";
 import { ButtonVariantEnum } from "@/utils/enums/ButtonVariantEnum.ts";
 import { ObjectStateEnum } from "@/utils/enums/ObjectStateEnum.ts";
 import { nextTick, ref } from "vue";
@@ -67,6 +67,8 @@ async function checkValidation(): Promise<boolean> {
       :minLength="10"
       placeholderText="Your project title"
       title="Title"
+      tooltip-title="Project Title"
+      tooltip-message="Create a short title describing the project you wish to create. Minimum length of 10 characters and Maximum length of 20"
       @isValid="(value) => (fieldValidation['titleModel'] = value)"
     />
     <TextInputComponent v-model="groupModel" title="Group Permissions" />

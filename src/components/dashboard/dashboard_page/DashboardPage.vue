@@ -1,6 +1,7 @@
 <script setup lang="ts">
-import CardHeader from "@/components/render/card/CardHeader.vue";
-import CardComponent from "@/components/render/card/CardComponent.vue";
+import CardHeader from "@/components/prefab/card/CardHeader.vue";
+import CardComponent from "@/components/prefab/card/CardComponent.vue";
+import TooltipComponent from "@/components/prefab/tooltip_component/TooltipComponent.vue";
 </script>
 
 <template>

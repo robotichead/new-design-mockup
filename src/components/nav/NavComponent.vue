@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import NavMenu from "@/components/nav/NavMenu.vue";
-import NavMenuSkeleton from "@/components/nav/NavMenuSkeleton.vue";
-import NavSettingMenu from "@/components/nav/NavSettingMenu.vue";
+import NavMenu from "@/components/nav/nav_menu/NavMenu.vue";
+import NavMenuSkeleton from "@/components/nav/nav_menu_skeleton/NavMenuSkeleton.vue";
+import NavSettingMenu from "@/components/nav/nav_setting_menu/NavSettingMenu.vue";
 import { useNavStore } from "@/stores/nav/nav.ts";
 import { computed } from "vue";
 

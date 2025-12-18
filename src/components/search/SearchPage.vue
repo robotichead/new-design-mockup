@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import CardComponent from "@/components/render/card/CardComponent.vue";
-import CardHeader from "@/components/render/card/CardHeader.vue";
+import CardComponent from "@/components/prefab/card/CardComponent.vue";
+import CardHeader from "@/components/prefab/card/CardHeader.vue";
 import {computed} from "vue";
 import {useRoute} from "vue-router";
 import i18n from "@/i18n.ts";

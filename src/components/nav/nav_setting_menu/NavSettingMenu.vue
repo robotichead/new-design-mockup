@@ -3,7 +3,7 @@ import type { MenuItemInterface } from "@/utils/interfaces/MenuItemInterface.ts"
 // Icons
 import { Cog, LogOut } from "lucide-vue-next";
 import { ref } from "vue";
-import NavMenuItem from "./NavMenuItem.vue";
+import NavMenuItem from "../nav_menu/nav_menu_item/NavMenuItem.vue";
 
 // Data
 const navSettingMenu = ref<MenuItemInterface[]>([]);

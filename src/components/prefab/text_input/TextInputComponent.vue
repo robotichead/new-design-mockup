@@ -1,7 +1,8 @@
 <script setup lang="ts">
-import FormGroup from "@/components/render/form/FormGroup.vue";
+import FormGroup from "@/components/prefab/form_group/FormGroup.vue";
 import {computed, ref} from "vue";
-import RenderErrorMessage from "@/components/render/error/RenderErrorMessage.vue";
+import RenderErrorMessage from "@/components/prefab/error/RenderErrorMessage.vue";
+import TooltipComponent from "@/components/prefab/tooltip_component/TooltipComponent.vue";
 
 // Define Emits
 const emit = defineEmits(["isValid"]);
@@ -33,6 +34,16 @@ const props = defineProps({
 		type: String,
 		required: true,
 	},
+	tooltipMessage: {
+		type: String,
+		required: false,
+		default: "",
+	},
+	tooltipTitle: {
+		type: String,
+		required: false,
+		default: "",
+	}
 });
 
 // Define Models
@@ -82,7 +93,15 @@ function checkValidation() {
 
 <template>
 	<FormGroup>
-		<label :for="getId"> {{ title }}<span v-if="isRequired">*</span> </label>
+		<label :for="getId">
+			<TooltipComponent
+				v-if="props.tooltipMessage !== ''"
+				:title="tooltipTitle"
+				:message="tooltipMessage"
+				:id="getId"
+			/>
+			{{ title }}<span v-if="isRequired">*</span>
+		</label>
 		<input
 			:id="getId"
 			type="text"
