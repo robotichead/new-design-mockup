@@ -3,13 +3,9 @@ import NavMenu from "@/components/nav/nav_menu/NavMenu.vue";
 import NavMenuSkeleton from "@/components/nav/nav_menu_skeleton/NavMenuSkeleton.vue";
 import NavSettingMenu from "@/components/nav/nav_setting_menu/NavSettingMenu.vue";
 import {useNavStore} from "@/stores/nav/nav.ts";
-import {computed} from "vue";
 
 // Stores
 const navStore = useNavStore();
-
-// Computed
-const navClass = computed(() => (navStore.isNavOpen ? "nav-open" : ""));
 </script>
 
 <template>
@@ -51,6 +47,7 @@ nav {
 	flex-direction: column;
 	display: flex;
 	justify-content: space-between;
+	z-index: 1000;
 
 	@media (--small-screen) {
 		width: 255px;

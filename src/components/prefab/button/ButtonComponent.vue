@@ -8,22 +8,22 @@ const props = defineProps({
     type: String,
     required: true,
   },
-    objectState: {
-        required: true,
-		// This is broken - the value does not translate back into the object state
-        validator: function (value: string): boolean {
-			const enumValues : string[] = Object.values(ObjectStateEnum);
-			return enumValues.includes(value);
-        },
+  objectState: {
+    required: true,
+    // This is broken - the value does not translate back into the object state
+    validator: function (value: string): boolean {
+      const enumValues: string[] = Object.values(ObjectStateEnum);
+      return enumValues.includes(value);
     },
-    variant: {
-        required: false,
-        default: ButtonVariantEnum.Primary,
-		validator: function (value: string): boolean {
-			const enumValues : string[] = Object.values(ButtonVariantEnum);
-			return enumValues.includes(value);
-		},
+  },
+  variant: {
+    required: false,
+    default: ButtonVariantEnum.Primary,
+    validator: function (value: string): boolean {
+      const enumValues: string[] = Object.values(ButtonVariantEnum);
+      return enumValues.includes(value);
     },
+  },
 });
 
 const buttonText = computed(() => {
