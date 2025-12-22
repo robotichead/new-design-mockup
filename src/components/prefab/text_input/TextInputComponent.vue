@@ -100,7 +100,7 @@ function checkValidation() {
 				:message="tooltipMessage"
 				:id="getId"
 			/>
-			{{ title }}<span v-if="isRequired">*</span>
+			{{ title }}<span v-if="isRequired" aria-description="Field is required">*</span>
 		</label>
 		<input
 			:id="getId"

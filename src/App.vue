@@ -36,9 +36,10 @@ onMounted(() => {
 </template>
 
 <style scoped>
-.main {
+main {
 	min-height: calc(100dvh - 60px);
 	background-color: var(--bg-dark);
+	transition: margin-left 0.5s ease;
 
 	@media (--medium-screen) {
 		min-height: calc(100dvh - 65px);
@@ -46,7 +47,7 @@ onMounted(() => {
 	}
 }
 
-.main.nav-open {
+main.nav-open {
 	@media (--x-large-screen) {
 		margin-left: 263px;
 	}
