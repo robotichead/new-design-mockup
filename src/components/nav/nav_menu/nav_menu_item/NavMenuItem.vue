@@ -99,8 +99,8 @@ function closeMenu(): void {
   display: flex;
   flex-direction: row;
   border: 1px solid lightgray;
-  margin-bottom: 10px;
-  border-radius: 5px;
+  margin-bottom: 1rem;
+  border-radius: var(--border-radius);
 }
 
 .nav-bar--menu--item:hover,
