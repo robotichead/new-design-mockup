@@ -5,8 +5,10 @@ import SearchResults from "@/components/search/search_results/SearchResults.vue"
 </script>
 
 <template>
-	<SearchFilter />
-	<SearchResults />
+	<div>
+		<SearchFilter />
+		<SearchResults />
+	</div>
 </template>
 
 <style scoped></style>

@@ -35,30 +35,30 @@ import CardComponent from "@/components/prefab/card/CardComponent.vue";
 		<h2>Where can I give feedback?</h2>
 		<p>
 			All feedback can be given to us on either;
-			<ul>
-				<li>
-					<a
-						href="https://discord.gg/64uhRztS6n"
-						ref="no-follow no-index"
-						target="_blank"
-					>Discord</a>
-				</li>
-				<li>
-					<a
-						href="https://x.com/robotichead"
-						ref="no-follow no-index"
-						target="_blank"
-					>Twitter</a>
-				</li>
-				<li>
-					<a
-						href="https://bsky.app/profile/robotichead.bsky.social"
-						ref="no-follow no-index"
-						target="_blank"
-					>Bluesky</a>
-				</li>
-			</ul>
 		</p>
+		<ul>
+			<li>
+				<a
+					href="https://discord.gg/64uhRztS6n"
+					ref="no-follow no-index"
+					target="_blank"
+				>Discord</a>
+			</li>
+			<li>
+				<a
+					href="https://x.com/robotichead"
+					ref="no-follow no-index"
+					target="_blank"
+				>Twitter</a>
+			</li>
+			<li>
+				<a
+					href="https://bsky.app/profile/robotichead.bsky.social"
+					ref="no-follow no-index"
+					target="_blank"
+				>Bluesky</a>
+			</li>
+		</ul>
 	</CardComponent>
 </template>
 
