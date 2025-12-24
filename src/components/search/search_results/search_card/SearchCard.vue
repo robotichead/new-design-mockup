@@ -43,7 +43,7 @@ const props = defineProps({
 		</div>
 		<div class="object-title">
 			<ObjectIdTag :id="props.id" :object-type="props.objectType" class="object-id-tag"/>
-			<a :href="`${props.objectType}/${props.id}`">{{ title }}</a>
+		    <RouterLink :to="`${props.objectType}/${props.id}`">{{ title }}</RouterLink>
 		</div>
 		<ObjectStatusTag class="object-status-tag"
 						 :higher-order-status="higherOrderStatus"

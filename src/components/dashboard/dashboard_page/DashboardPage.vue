@@ -27,7 +27,7 @@ import CardComponent from "@/components/prefab/card/CardComponent.vue";
 			We have only implemented the following sections;
 		</p>
 		<ul>
-			<li>Project Search - <span style="font-weight:lighter;">To be constructed</span></li>
+			<li>Project Search - <span style="font-weight:lighter;">Click on the "Project" item in the Navbar</span></li>
 			<li>New Project - <span style="font-weight:lighter;">Click on the + on the "Project" item in the Navbar</span></li>
 			<li>Project Information - <span style="font-weight:lighter;">To be constructed</span></li>
 		</ul>

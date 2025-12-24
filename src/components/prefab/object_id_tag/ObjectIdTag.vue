@@ -19,9 +19,9 @@ const props = defineProps({
 
 <template>
 	<span :class="`object-id-tag ${props.objectType}`">
-		<a :href="`${props.objectType}/${props.id}`">
+		<RouterLink :to="`${props.objectType}/${props.id}`">
 			{{ shortObjectType[props.objectType] }}-{{ props.id }}
-		</a>
+		</RouterLink>
 	</span>
 </template>
 

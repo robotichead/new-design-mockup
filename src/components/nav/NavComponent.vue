@@ -9,8 +9,11 @@ const navStore = useNavStore();
 </script>
 
 <template>
-	<transition>
-		<nav role="navigation" v-if="navStore.isNavOpen">
+	<Transition>
+		<nav
+			v-show="navStore.isNavOpen"
+			role="navigation"
+		>
 			<div class="nav-bar--menu">
 				<ul class="nav-bar--menu--list">
 					<suspense>
@@ -87,11 +90,11 @@ nav {
 
 .v-enter-active,
 .v-leave-active {
-	transition: transform 0.5s ease;
+  transition: transform 0.5s ease;
 }
 
 .v-enter-from,
 .v-leave-to {
-	transform: translateX(-100%);
+  transform: translateX(-100%);
 }
 </style>
