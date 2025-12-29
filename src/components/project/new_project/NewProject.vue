@@ -73,13 +73,13 @@ async function checkValidation(): Promise<boolean> {
       :isRequired="true"
       :maxLength="20"
       :minLength="10"
+	  label="Title"
       placeholderText="Your project title"
-      title="Title"
       tooltip-title="Project Title"
       tooltip-message="Create a short title describing the project you wish to create. Minimum length of 10 characters and Maximum length of 20"
       @isValid="(value) => (fieldValidation['titleModel'] = value)"
     />
-    <TextInputComponent v-model="groupModel" title="Group Permissions" />
+    <TextInputComponent v-model="groupModel" label="Group Permissions" />
 
     <CardFooter>
       <ButtonComponent

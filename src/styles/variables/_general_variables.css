@@ -1,6 +1,12 @@
 :root {
     /* Set all variables in here for globals */
-    --max-card-width: 768px;
+    --xx-small-card-width: 320px;
+    --x-small-card-width: 400px;
+    --small-card-width: 640px;
+    --medium-card-width: 768px;
+    --large-card-width: 1024px;
+    --x-large-card-width: 1280px;
+    --xx-large-card-width: 1536px;
 
     /* Set all the border variables here */
     --border-radius: 5px;

@@ -56,7 +56,7 @@ const errorMessage = ref("");
 // Computed
 const getId = computed(() => {
 	// Return an id made up of input- + title
-	return "input-" + props.label?.toLowerCase()?.replace(" ", "-");
+	return "input-" + props.title?.toLowerCase()?.replace(" ", "-");
 });
 
 function checkValidation() {
@@ -104,7 +104,8 @@ function checkValidation() {
 				label
 			}}<span v-if="isRequired" aria-description="Field is required">*</span>
 		</label>
-		<input
+		<textarea
+			rows="10"
 			:id="getId"
 			type="text"
 			:name="props.label"
@@ -126,7 +127,7 @@ span {
 	color: var(--text-red);
 }
 
-input {
+textarea {
 	border-style: var(--border-style);
 	border-width: var(--border-width);
 	border-radius: var(--border-radius);
