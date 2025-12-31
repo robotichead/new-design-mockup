@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import {computed} from 'vue';
+
 // PROPS
 const props = defineProps({
 	higherOrderStatus: {
@@ -13,22 +15,28 @@ const props = defineProps({
 		required: true,
 	},
 });
+
+// COMPUTED
+const classNames = computed(() => {
+	return `object-status-tag ${props.higherOrderStatus}`
+})
 </script>
 
 <template>
-	<div class="object-status-tag">
-		<span :class="props.higherOrderStatus">
-			{{ status}}
-		</span>
-	</div>
+	<span :class="classNames">
+		{{ status }}
+	</span>
 </template>
 
 <style scoped>
-span {
+.object-status-tag {
 	padding: 0.125rem 0.75rem;
 	margin-bottom: 0.125rem;
 	border-radius: var(--border-radius);
 	font-size: 0.75rem;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
 
 	&.backlog {
 		background-color: var(--info);

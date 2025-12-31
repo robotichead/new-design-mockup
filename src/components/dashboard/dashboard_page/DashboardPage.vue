@@ -1,11 +1,14 @@
 <script setup lang="ts">
-import CardHeader from "@/components/prefab/card/CardHeader.vue";
+import CardHeader from "@/components/prefab/card/card_header/CardHeader.vue";
 import CardComponent from "@/components/prefab/card/CardComponent.vue";
 </script>
 
 <template>
-	<CardComponent>
-		<CardHeader title="Welcome to the Redesign" description="We are looking for you feedback"/>
+	<CardComponent class="dashboard-page">
+		<CardHeader>
+			<h1 id="main-title">Welcome to the Redesign</h1>
+			<p class="sub-text">We are looking for you feedback</p>
+		</CardHeader>
 
 		<h2 style="margin-top: -1rem;">Why have we built this?</h2>
 		<p>
@@ -62,4 +65,20 @@ import CardComponent from "@/components/prefab/card/CardComponent.vue";
 	</CardComponent>
 </template>
 
-<style scoped></style>
+<style scoped>
+.dashboard-page {
+	display: grid;
+	grid-template-columns: 1fr;
+	max-width: var(--large-grid-width);
+	margin: auto;
+	padding: 0 0.5rem;
+
+	@media (--small-screen) {
+		padding: 0.5rem 1rem;
+	}
+
+	@media (--large-screen) {
+		padding: 1rem 2rem;
+	}
+}
+</style>

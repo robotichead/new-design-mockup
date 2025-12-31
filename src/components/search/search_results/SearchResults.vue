@@ -37,9 +37,4 @@ import SearchHeader from "@/components/search/search_results/search_header/Searc
 </template>
 
 <style scoped>
-.search-results {
-	margin-top: 1rem;
-	padding-top: 0;
-}
-
 </style>

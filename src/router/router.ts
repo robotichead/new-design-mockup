@@ -7,6 +7,8 @@ const NewProject = () =>
     import("@/components/project/new_project/NewProject.vue");
 const NotFoundPage = () =>
     import("@/components/error/NotFoundPage/NotFoundPage.vue");
+const PlaygroundPage = () =>
+    import("@/components/playground/PlaygroundPage.vue");
 const ProjectPage = () =>
     import("@/components/project/project_page/ProjectPage.vue");
 const SearchPage = () => import("@/components/search/SearchPage.vue");
@@ -75,6 +77,13 @@ const routes = [
             {path: "new", component: DashboardPage, name: "NewRequestForChange"},
             {path: ":id", component: DashboardPage, name: "RequestForChange"},
         ],
+    },
+    {
+        path: "/logout",
+        meta: {
+            destination: "logout",
+        },
+        component: PlaygroundPage,
     },
     // Fall back page
     {

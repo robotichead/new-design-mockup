@@ -2,7 +2,6 @@
 import CardComponent from "@/components/prefab/card/CardComponent.vue";
 import TextInputComponent from "@/components/prefab/text_input/TextInputComponent.vue";
 import DatetimeComponent from "@/components/prefab/datetime_component/DatetimeComponent.vue";
-import NumberPicker from "@/components/prefab/number_picker/NumberPicker.vue";
 
 // Define Modals
 const endDateModel = defineModel("endDateModel", {
@@ -34,39 +33,32 @@ const fieldValidation: Record<string, boolean> = {
 </script>
 
 <template>
-	<CardComponent class="xx-small fill-out mt-0">
+	<CardComponent class="large fill-out mt-0 properties">
 		<h3>Properties</h3>
 
 		<TextInputComponent
+			class="status"
 			v-model="statusModel"
 			label="Status"
 			@isValid="(value) => (fieldValidation['statusModel'] = value)"
 		/>
 		<TextInputComponent
+			class="priority"
 			v-model="priorityModel"
 			label="Priority"
 			@isValid="(value) => (fieldValidation['priorityModel'] = value)"
 		/>
 
-		<NumberPicker
-			label="Story Points"
-			v-model="storyPointsModel"
-			:min-value="0"
-			:max-value="5"
-		/>
-
-		<hr/>
-
-		Tags
-
-		<hr/>
+		<!-- REIMPLEMENT NUMBER PICKER FOR STORY POINTS! -->
 
 		<DatetimeComponent
+			class="start-date"
 			v-model="startDateModel"
 			label="Start Date"
 			@isValid="(value) => (fieldValidation['startDateModel'] = value)"
 		/>
 		<DatetimeComponent
+			class="end-date"
 			v-model="endDateModel"
 			label="End Date"
 			@isValid="(value) => (fieldValidation['endDateModel'] = value)"
@@ -75,8 +67,117 @@ const fieldValidation: Record<string, boolean> = {
 </template>
 
 <style scoped>
-h3 {
-	margin: 0 0 1.5rem 0;
-}
 
+.properties {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-column-gap: 0.5rem;
+
+	@media (--small-screen) {
+		grid-template-columns: repeat(6, minmax(0, 1fr));
+		grid-template-rows: 2.5rem 1fr 1fr;
+	}
+
+	@media (--large-screen) {
+		grid-template-columns: 1fr;
+		grid-template-rows: 2.5rem repeat(5, minmax(0, 1fr));
+	}
+
+	> h3 {
+		margin: 0 0 1.5rem 0;
+
+		@media (--small-screen) {
+			grid-column-start: 1;
+			grid-column-end: 7;
+			grid-row-start: 1;
+			grid-row-end: 2;
+		}
+
+		@media (--large-screen) {
+			grid-column-start: 1;
+			grid-column-end: 2;
+		}
+	}
+
+	> .status {
+		@media (--small-screen) {
+			grid-column-start: 1;
+			grid-column-end: 3;
+			grid-row-start: 2;
+			grid-row-end: 3;
+		}
+		@media (--large-screen) {
+			grid-column-start: 1;
+			grid-column-end: 2;
+			grid-row-start: 2;
+			grid-row-end: 3;
+		}
+	}
+
+	> .priority {
+		@media (--small-screen) {
+			grid-column-start: 3;
+			grid-column-end: 5;
+			grid-row-start: 2;
+			grid-row-end: 3;
+		}
+
+		@media (--large-screen) {
+			grid-column-start: 1;
+			grid-column-end: 2;
+			grid-row-start: 3;
+			grid-row-end: 4;
+		}
+	}
+
+	> .story-points {
+		@media (--small-screen) {
+			grid-column-start: 5;
+			grid-column-end: 7;
+			grid-row-start: 2;
+			grid-row-end: 3;
+			grid-row-start: 2;
+			grid-row-end: 3;
+		}
+
+		@media (--large-screen) {
+			grid-column-start: 1;
+			grid-column-end: 2;
+			grid-row-start: 4;
+			grid-row-end: 5;
+		}
+
+	}
+
+	> .start-date {
+		@media (--small-screen) {
+			grid-column-start: 1;
+			grid-column-end: 4;
+			grid-row-start: 3;
+			grid-row-end: 4;
+		}
+		@media (--large-screen) {
+			grid-column-start: 1;
+			grid-column-end: 2;
+			grid-row-start: 5;
+			grid-row-end: 6;
+		}
+	}
+
+	> .end-date {
+		@media (--small-screen) {
+			grid-column-start: 4;
+			grid-column-end: 7;
+			grid-row-start: 3;
+			grid-row-end: 4;
+		}
+
+		@media (--large-screen) {
+			grid-column-start: 1;
+			grid-column-end: 2;
+			grid-row-start: 6;
+			grid-row-end: 7;
+		}
+	}
+}
 </style>

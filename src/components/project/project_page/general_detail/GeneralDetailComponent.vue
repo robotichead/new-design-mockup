@@ -2,7 +2,7 @@
 import TextInputComponent from "@/components/prefab/text_input/TextInputComponent.vue";
 import TextareaComponent from "@/components/prefab/textarea/TextareaComponent.vue";
 import CardComponent from "@/components/prefab/card/CardComponent.vue";
-import CardHeader from "@/components/prefab/card/CardHeader.vue";
+import CardHeader from "@/components/prefab/card/card_header/CardHeader.vue";
 
 // Define data
 const fieldValidation: Record<string, boolean> = {
@@ -22,8 +22,10 @@ const descriptionModel = defineModel("descriptionModel", {
 </script>
 
 <template>
-	<CardComponent class="xx-large fill-out">
-		<CardHeader title="Project Details"/>
+	<CardComponent class="x-large fill-out general-details">
+		<CardHeader>
+			<h1 id="main-title">Project Details</h1>
+		</CardHeader>
 		<TextInputComponent
 			v-model="titleModel"
 			:isRequired="true"

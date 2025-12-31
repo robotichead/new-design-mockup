@@ -4,7 +4,6 @@
 
 <template>
 	<div class="search-header">
-		<div class="object-id-tag">#Id</div>
 		<div class="object-title">Title</div>
 		<div class="object-status-tag">Status</div>
 	</div>
@@ -12,42 +11,33 @@
 
 <style scoped>
 .search-header {
-	display: flex;
-	flex-direction: row;
-	width: 100%;
-	transform: translateX(-0.5rem);
-	padding: 0.5rem;
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
 	background-color: var(--primary);
+	padding: 0.5rem;
 
-	> .object-id-tag {
-		display: none;
-
-		@media (--medium-screen) {
-			display: block;
-		}
-	}
-
-	> .object-id-tag,
-	.object-status-tag {
-		width: calc(100% / 3);
-
-		@media (--medium-screen) {
-			width: calc(100% / 6);
-		}
+	@media (--medium-screen) {
+		grid-template-columns: repeat(6, minmax(0, 1fr));
 	}
 
 	> .object-title {
-		width: calc(100% * 2 / 3);
+		grid-column-start: 1;
+		grid-column-end: 3;
+
+		@media (--medium-screen) {
+			grid-column-start: 1;
+			grid-column-end: 6;
+		}
 	}
 
-	@media (--medium-screen) {
-		width: calc(100% + 1rem);
-		transform: translateX(-1rem);
-	}
+	> .object-status-tag {
+		grid-column-start: 3;
+		grid-column-end: 4;
 
-	@media (--large-screen) {
-		width: calc(100% + 3rem);
-		transform: translateX(-2rem);
+		@media (--medium-screen) {
+			grid-column-start: 6;
+			grid-column-end: 7;
+		}
 	}
 }
 

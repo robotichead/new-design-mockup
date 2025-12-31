@@ -37,70 +37,60 @@ const props = defineProps({
 
 <template>
 	<div class="search-card">
-		<div class="object-id-tag">
-			<ObjectIdTag :id="props.id"
-						 :object-type="props.objectType"/>
-		</div>
+		<ObjectIdTag
+			:id="props.id"
+			:object-type="props.objectType"
+		/>
 		<div class="object-title">
-			<ObjectIdTag :id="props.id" :object-type="props.objectType" class="object-id-tag"/>
-		    <RouterLink :to="`${props.objectType}/${props.id}`">{{ title }}</RouterLink>
+			<RouterLink :to="`${props.objectType}/${props.id}`">{{ title }}</RouterLink>
 		</div>
-		<ObjectStatusTag class="object-status-tag"
-						 :higher-order-status="higherOrderStatus"
-						 :status="props.status"
+		<ObjectStatusTag
+			:higher-order-status="higherOrderStatus"
+			:status="props.status"
 		/>
 	</div>
 </template>
 
 <style scoped>
 .search-card {
-	display: flex;
-	flex-direction: row;
-	width: 100%;
-	transform: translateX(-0.5rem);
-	padding: 1rem;
+	display: grid;
+	padding: 0.5rem;
 	border-bottom: var(--border-muted) var(--border-style) var(--border-width);
-
-	> .object-id-tag {
-		display: none;
-
-		@media (--medium-screen) {
-			display: block;
-		}
-	}
-
-	> .object-id-tag,
-	.object-status-tag {
-		width: calc(100% / 3);
-
-		@media (--medium-screen) {
-			width: calc(100% / 6);
-		}
-	}
-
-	> .object-title {
-		width: calc(100% * 2 / 3);
-
-		> a {
-			text-decoration-line: none;
-			color: var(--text)
-		}
-
-		@media (--medium-screen) {
-			> .object-id-tag {
-				display: none;
-			}
-		}
-	}
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	grid-template-rows: 1.5rem 1fr;
 
 	@media (--medium-screen) {
-		width: calc(100% + 1rem);
-		transform: translateX(-1rem);
+		grid-template-columns: repeat(6, minmax(0, 1fr));
 	}
 
-	@media (--large-screen) {
-		width: calc(100% + 3rem);
-		transform: translateX(-2rem);
+	.object-id-tag {
+		grid-column-start: 1;
+		grid-column-end: 2;
+		grid-row-start: 1;
+		grid-row-end: 2;
+	}
+
+	.object-title {
+		grid-column-start: 1;
+		grid-column-end: 4;
+		grid-row-start: 2;
+		grid-row-end: 3;
+
+		@media (--medium-screen) {
+			grid-column-end: 6;
+		}
+	}
+
+	.object-status-tag {
+		grid-column-start: 3;
+		grid-column-end: 4;
+		grid-row-start: 1;
+		grid-row-end: 2;
+
+		@media (--medium-screen) {
+			grid-column-start: 6;
+			grid-column-end: 7;
+		}
 	}
 }
 

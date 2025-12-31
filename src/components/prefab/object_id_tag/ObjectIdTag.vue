@@ -26,88 +26,14 @@ const props = defineProps({
 </template>
 
 <style scoped>
-span {
-	display: table;
-	padding: 0.125rem 0.75rem;
-	margin-bottom: 0.125rem;
-	border-radius: var(--border-radius);
-	font-size: 0.75rem;
-
+.object-id-tag {
 	> a {
+		margin-bottom: 0.125rem;
+		font-size: 0.75rem;
 		text-decoration-line: none;
-
-		&.customer {
-			color: var(--customer-text);
-		}
-
-		&.kanban_board {
-			color: var(--kanban-board-text);
-		}
-
-		&.kanban_card {
-			color: var(--kanban-card-text);
-		}
-
-		&.organisation {
-			color: var(--organisation-text);
-		}
-
-		&.request_for_change {
-			color: var(--request-for-change-text);
-		}
-
-		&.requirement {
-			color: var(--requirement-text);
-		}
-
-		&.requirement_item {
-			color: var(--requirement-item-text);
-		}
-
-		&.project {
-			color: var(--project-text);
-		}
-
-		&.task {
-			color: var(--task-text);
-		}
+		color: var(--color-text);
 	}
 
-	&.customer {
-		background-color: var(--customer-background);
-	}
-
-	&.kanban_board {
-		background-color: var(--kanban-board-background);
-	}
-
-	&.kanban_card {
-		background-color: var(--kanban-card-background);
-	}
-
-	&.organisation {
-		background-color: var(--organisation-background);
-	}
-
-	&.request_for_change {
-		background-color: var(--request-for-change-background);
-	}
-
-	&.requirement {
-		background-color: var(--requirement-background);
-	}
-
-	&.requirement_item {
-		background-color: var(--requirement-item-background);
-	}
-
-	&.project {
-		background-color: var(--project-background);
-	}
-
-	&.task {
-		background-color: var(--task-background);
-	}
 }
 
 </style>

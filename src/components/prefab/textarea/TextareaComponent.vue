@@ -47,7 +47,11 @@ const props = defineProps({
 });
 
 // Define Models
-const model = defineModel();
+const model = defineModel("model", {
+	type: String,
+	required: false,
+	default: "",
+});
 
 // Define ref
 const hasError = ref(false);
@@ -56,7 +60,7 @@ const errorMessage = ref("");
 // Computed
 const getId = computed(() => {
 	// Return an id made up of input- + title
-	return "input-" + props.title?.toLowerCase()?.replace(" ", "-");
+	return "input-" + props.label?.toLowerCase()?.replace(" ", "-");
 });
 
 function checkValidation() {

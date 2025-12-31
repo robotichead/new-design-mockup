@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import ButtonComponent from "@/components/prefab/button/ButtonComponent.vue";
 import CardComponent from "@/components/prefab/card/CardComponent.vue";
-import CardFooter from "@/components/prefab/card/CardFooter.vue";
-import CardHeader from "@/components/prefab/card/CardHeader.vue";
+import CardFooter from "@/components/prefab/card/card_footer/CardFooter.vue";
+import CardHeader from "@/components/prefab/card/card_header/CardHeader.vue";
 import TextInputComponent from "@/components/prefab/text_input/TextInputComponent.vue";
 import { ButtonVariantEnum } from "@/utils/enums/ButtonVariantEnum.ts";
 import { ObjectStateEnum } from "@/utils/enums/ObjectStateEnum.ts";

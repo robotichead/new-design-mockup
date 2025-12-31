@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed } from 'vue';
+import {computed} from 'vue';
 
 // Model
 const model = defineModel();
@@ -24,21 +24,26 @@ const checkboxId = computed(() => {
 </script>
 
 <template>
-	<input :id="checkboxId"
-		   :name="label"
-		   v-model="model"
-		   type="checkbox"
-	/>
-	<label :for="checkboxId">{{props.label}}</label>
+	<div class="checkbox-component">
+
+		<input :id="checkboxId"
+			   :name="label"
+			   v-model="model"
+			   type="checkbox"
+		/>
+		<label :for="checkboxId">{{ props.label }}</label>
+	</div>
 </template>
 
 <style scoped>
-label {
-	padding: 0.5rem;
-}
+.checkbox-component {
+	label {
+		padding: 0.5rem;
+	}
 
-input {
-	padding: 0.5rem;
+	input {
+		padding: 0.5rem;
+	}
 }
 
 </style>
