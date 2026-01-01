@@ -1,12 +1,11 @@
 // App.spec.ts
 import {routes} from "@/router/router.ts";
 import {useNavStore} from "@/stores/nav/nav.ts";
-import {flushPromises, shallowMount, mount} from "@vue/test-utils";
+import {mount} from "@vue/test-utils";
 import {setActivePinia, createPinia} from "pinia";
 import {describe, test, expect, beforeEach} from "vitest";
 import {createRouter, createWebHistory} from "vue-router";
 import App from "./App.vue";
-import {nextTick} from "vue";
 
 const router = createRouter({
 	history: createWebHistory(),
