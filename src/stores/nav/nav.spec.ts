@@ -8,30 +8,30 @@ describe('Nav - check "toggleNav" action works', () => {
     setActivePinia(createPinia());
   });
 
-  test("Make sure the toggleNav function updates the isNavOpen from true to false", () => {
+  test("Make sure the toggleNav function updates the isNavOpen from false to true", () => {
     const nav = useNavStore();
 
-    // Expect isNavOpen to be true by default
-    expect(nav.isNavOpen).toBe(true);
+    // Expect isNavOpen to be false by default
+    expect(nav.isNavOpen).toBe(false);
 
     // Activate the toggleNav action
     nav.toggleNav();
 
-    // Expect isNavOpen to be false now
-    expect(nav.isNavOpen).toBe(false);
+    // Expect isNavOpen to be true now
+    expect(nav.isNavOpen).toBe(true);
   });
 
   test("Make sure the toggleNav function updates the isNavOpen from true to false", () => {
     const nav = useNavStore();
 
-    // Update the isNavOpen to false
-    nav.isNavOpen = false;
-    expect(nav.isNavOpen).toBe(false);
+    // Update the isNavOpen to true
+    nav.isNavOpen = true;
+    expect(nav.isNavOpen).toBe(true);
 
     // Active the toggleNav action
     nav.toggleNav();
 
-    // Expect isNavOpen to be true now
-    expect(nav.isNavOpen).toBe(true);
+    // Expect isNavOpen to be false now
+    expect(nav.isNavOpen).toBe(false);
   });
 });

@@ -47,11 +47,7 @@ const props = defineProps({
 });
 
 // Define Models
-const model = defineModel('model', {
-    type: String,
-    required: false,
-    default: '',
-});
+const model = defineModel();
 
 // Define ref
 const hasError = ref(false);
@@ -109,8 +105,7 @@ function checkValidation() {
                 >*</span
             >
         </label>
-        <textarea
-            rows="10"
+        <input
             :id="getId"
             type="text"
             :name="props.label"
@@ -132,7 +127,7 @@ span {
     color: var(--text-red);
 }
 
-textarea {
+input {
     border-style: var(--border-style);
     border-width: var(--border-width);
     border-radius: var(--border-radius);

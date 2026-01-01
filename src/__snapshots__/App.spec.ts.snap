@@ -1,7 +1,6 @@
-// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
-
-exports[`App > mount component 1`] = `
-"<span data-v-30494e7c="" tabindex="-1"></span>
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html exports[`App >
+mount component 1`] = ` "
+<span data-v-30494e7c="" tabindex="-1"></span>
 <ul data-v-30494e7c="" class="skip-links">
   <li data-v-30494e7c=""><a data-v-30494e7c="" href="#main" class="skip-link">Skip to main content</a></li>
 </ul>
@@ -59,8 +58,14 @@ exports[`App > mount component 1`] = `
     </ul>
   </div>
 </nav>
-<main data-v-7a7a37b1="" id="main" class="main nav-open" aria-labelledby="main-title" role="main">
+<main
+    data-v-7a7a37b1=""
+    id="main"
+    class="main nav-open"
+    aria-labelledby="main-title"
+    role="main"
+>
   <h1>Dashboard</h1>
   <p> We would love some feedback. <a href="https://discord.gg/64uhRztS6n" target="_blank">Please give us feedback on our discord server</a></p>
-</main>"
-`;
+</main>
+" `;

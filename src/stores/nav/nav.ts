@@ -4,7 +4,7 @@ import { defineStore } from "pinia";
 export const useNavStore = defineStore("nav", {
   state: () => {
     return {
-      isNavOpen: true,
+      isNavOpen: false,
     };
   },
   actions: {
