@@ -38,4 +38,10 @@ import SearchHeader from '@/components/search/search_results/search_header/Searc
     </CardComponent>
 </template>
 
-<style scoped></style>
+<style scoped>
+.search-results {
+	@media (--medium-screen) {
+		margin: 0 0.5rem;
+	}
+}
+</style>

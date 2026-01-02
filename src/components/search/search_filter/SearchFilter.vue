@@ -45,6 +45,10 @@ const filterOutExternalGroups = ref(true);
         padding: 0.5rem 1rem;
     }
 
+	@media (--medium-screen) {
+		margin: 0 0.5rem;
+	}
+
     @media (--large-screen) {
         padding: 1rem 2rem;
         grid-template-rows: 3.25rem 2.125rem 3.125rem 1.5rem 1.5rem;
