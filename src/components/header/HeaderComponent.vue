@@ -27,7 +27,7 @@ function openNav(): void {
         </div>
         <div class="nearbeach-logo" aria-hidden="true"></div>
         <div class="header--profile">
-            <img src="../../assets/Morgana.jpeg" alt="Morgana" />
+            <img src="https://nearbeach.org/media/23whasoc/screenshot-2023-01-18-at-60448-pm.png?width=120" alt="Morgana" />
         </div>
     </header>
 </template>
