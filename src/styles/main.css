@@ -70,7 +70,8 @@ input, textarea {
 }
 
 .sub-text {
-    font-weight: lighter;
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
     margin: 0.5rem 0 3rem 0;
 }
 

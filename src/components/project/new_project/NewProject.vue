@@ -62,11 +62,11 @@ async function checkValidation(): Promise<boolean> {
 </script>
 
 <template>
-    <CardComponent>
-        <CardHeader
-            title="Create your new project"
-            description="Fill in the details below to start your new project"
-        />
+    <CardComponent class="new-project">
+		<CardHeader>
+			<h1 id="main-title">Create your new project</h1>
+			<p class="sub-text">Fill in the details below to start your new project</p>
+		</CardHeader>
 
         <TextInput
             v-model="titleModel"
@@ -92,4 +92,20 @@ async function checkValidation(): Promise<boolean> {
     </CardComponent>
 </template>
 
-<style scoped></style>
+<style scoped>
+.new-project {
+	border-radius: 0;
+	margin: 0 auto;
+	padding: 0 0.5rem;
+	max-width: var(--medium-grid-width);
+
+	@media (--medium-screen) {
+		border-radius: var(--border-radius);
+		padding: 0.5rem 1rem;
+	}
+
+	@media (--large-screen) {
+		padding: 1rem 2rem;
+	}
+}
+</style>
