@@ -44,7 +44,6 @@ h2 {
     font-size: 1.5rem;
     line-height: 1.625rem;
     font-weight: bold;
-    margin-top: 2rem;
     @media (--large-screen) {
         font-size: 2rem;
         line-height: 2.25rem;
@@ -56,6 +55,7 @@ p, label, button {
     font-family: "Roboto", sans-serif;
     line-height: 1.5rem;
     color: var(--text);
+    margin-bottom: 0;
     @meida (--large-screen) {
         font-size: 1rem;
         line-height: 1.25rem;

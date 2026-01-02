@@ -87,6 +87,18 @@ button {
     border-style: var(--border-style);
     color: var(--text);
 
+	&.compact {
+		padding: 0.25rem 0.125rem;
+		font-size: 0.75rem;
+		line-height: 1rem;
+	}
+
+	&.tiny {
+		padding: 0.125rem 0rem;
+		font-size: 0.75rem;
+		line-height: 0.75rem;
+	}
+
     &.primary {
         background-color: var(--primary);
         border-color: var(--primary);

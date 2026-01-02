@@ -11,5 +11,9 @@
     display: flex;
     flex-direction: column;
     margin-bottom: 1.75rem;
+
+	&.compact {
+		margin-bottom: 0.5rem;
+	}
 }
 </style>

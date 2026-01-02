@@ -22,9 +22,10 @@ const descriptionModel = defineModel('descriptionModel', {
 </script>
 
 <template>
-    <CardComponent class="x-large fill-out general-details">
+    <CardComponent class="general-details">
         <CardHeader>
             <h1 id="main-title">Project Details</h1>
+			<p class="sub-text">Update and modify your project details</p>
         </CardHeader>
         <TextInput
             v-model="titleModel"
@@ -46,4 +47,16 @@ const descriptionModel = defineModel('descriptionModel', {
     </CardComponent>
 </template>
 
-<style scoped></style>
+<style scoped>
+.general-details {
+	padding: 0 0.5rem;
+
+	@media (--medium-screen) {
+		padding: 0.5rem 1rem;
+	}
+
+	@media (--large-screen) {
+		padding: 0.5rem 1rem;
+	}
+}
+</style>

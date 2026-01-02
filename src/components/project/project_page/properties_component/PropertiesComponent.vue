@@ -34,24 +34,24 @@ const fieldValidation: Record<string, boolean> = {
 </script>
 
 <template>
-    <CardComponent class="large fill-out mt-0 properties">
+    <CardComponent class="properties-component">
         <h3>Properties</h3>
 
         <TextInput
-            class="status"
+            class="status compact"
             v-model="statusModel"
             label="Status"
             @isValid="(value) => (fieldValidation['statusModel'] = value)"
         />
         <TextInput
-            class="priority"
+            class="priority compact"
             v-model="priorityModel"
             label="Priority"
             @isValid="(value) => (fieldValidation['priorityModel'] = value)"
         />
 
         <NumberInput
-            class="story-points"
+            class="story-points compact"
             v-model="storyPointsModel"
             label="Story Points"
             :min-value="0"
@@ -59,13 +59,13 @@ const fieldValidation: Record<string, boolean> = {
         />
 
         <DatetimeComponent
-            class="start-date"
+            class="start-date compact"
             v-model="startDateModel"
             label="Start Date"
             @isValid="(value) => (fieldValidation['startDateModel'] = value)"
         />
         <DatetimeComponent
-            class="end-date"
+            class="end-date compact"
             v-model="endDateModel"
             label="End Date"
             @isValid="(value) => (fieldValidation['endDateModel'] = value)"
@@ -74,18 +74,23 @@ const fieldValidation: Record<string, boolean> = {
 </template>
 
 <style scoped>
-.properties {
+.properties-component {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     grid-column-gap: 0.5rem;
+	padding: 0 0.5rem;
 
     @media (--small-screen) {
         grid-template-columns: repeat(6, minmax(0, 1fr));
         grid-template-rows: 2.5rem 1fr 1fr;
     }
 
+	@media (--medium-screen) {
+		padding: 0.5rem;
+	}
+
     @media (--large-screen) {
-        grid-template-columns: 1fr;
+        grid-template-columns: minmax(0, 1fr);
         grid-template-rows: 2.5rem repeat(5, minmax(0, 1fr));
     }
 
