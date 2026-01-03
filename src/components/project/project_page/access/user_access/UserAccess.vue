@@ -37,9 +37,8 @@ function removeUser(user_id: number) {
 					src="https://nearbeach.org/media/gkgmptvg/bee-socks.jpg?width=120"
 					alt="User Profile Picture"
 				/>
-				{{ user.user_name }}
+				<p>{{ user.user_name }}</p>
 				<TrashIcon
-					v-if="props.userList.length > 1"
 					v-on:click="removeUser(user.user_id)"
 					type="button"
 					aria-label="Remove User"
@@ -59,6 +58,8 @@ function removeUser(user_id: number) {
 	> .user-access-list {
 		> .user-access-item {
 			padding: 0.5rem 0;
+			display: grid;
+			grid-template-columns: [profile] 20px [name] minmax(0, 1fr) [icon] 20px;
 
 			> img {
 				width: 20px;
@@ -66,13 +67,24 @@ function removeUser(user_id: number) {
 				object-fit: cover;
 				border-radius: 50%;
 				transform: translateY(5px);
+				grid-area: profile;
+			}
+
+
+			> p {
+				grid-area: name;
+				overflow: hidden;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+				padding: 0;
+				margin: 0;
+				font-size: 1rem;
 			}
 
 			> svg {
-				position: absolute;
-				transform: translateY(-1px);
-				right: 1rem;
-				width: 1rem;
+				grid-area: icon;
+				width: 20px;
+				height: 20px;
 			}
 
 			&:hover {

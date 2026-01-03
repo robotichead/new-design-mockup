@@ -38,7 +38,7 @@ function removeOrganisation() {
 			v-else
 		/>
 
-		<StakeholderCustomer />
+		<StakeholderCustomer v-if="organisationId !== 0" />
 	</CardComponent>
 </template>
 

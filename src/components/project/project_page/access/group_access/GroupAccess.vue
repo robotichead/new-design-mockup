@@ -13,7 +13,7 @@ const emit = defineEmits([
 // DEFINE PROPS
 const props = defineProps({
 	groupList: {
-		type: Array as PropType<{group_id: number, group_name: string}[]>,
+		type: Array as PropType<{ group_id: number, group_name: string }[]>,
 		required: true,
 	},
 });
@@ -36,7 +36,7 @@ function removeGroup(group_id: number) {
 				:key="group.group_id"
 				class="group-access-item"
 			>
-				{{group.group_name}}
+				<p>{{ group.group_name }}</p>
 				<TrashIcon
 					v-if="props.groupList.length > 1"
 					v-on:click="removeGroup(group.group_id)"
@@ -58,12 +58,23 @@ function removeGroup(group_id: number) {
 	> .group-access-list {
 		> .group-access-item {
 			padding: 0.5rem 0;
+			display: grid;
+			grid-template-columns: [name] minmax(0, 1fr) [icon] 20px;
+
+			> p {
+				grid-area: name;
+				overflow: hidden;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+				padding: 0;
+				margin: 0;
+				font-size: 1rem;
+			}
 
 			> svg {
-				position: absolute;
-				transform: translateY(-3px);
-				right: 1rem;
-				width: 1rem;
+				grid-area: icon;
+				width: 20px;
+				height: 20px;
 			}
 
 			&:hover {
