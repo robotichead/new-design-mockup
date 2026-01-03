@@ -3,6 +3,7 @@ import TextInput from '@/components/prefab/text_input/TextInput.vue';
 import TextareaComponent from '@/components/prefab/textarea/TextareaComponent.vue';
 import CardComponent from '@/components/prefab/card/CardComponent.vue';
 import CardHeader from '@/components/prefab/card/card_header/CardHeader.vue';
+import SwitchComponent from "@/components/prefab/switch/SwitchComponent.vue";
 
 // Define data
 const fieldValidation: Record<string, boolean> = {

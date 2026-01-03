@@ -19,8 +19,7 @@
     --bg: hsl(26 100% 94%);
     --bg-light: hsl(26 100% 100%);
     --text: hsl(16 100% 4%);
-    --text-red: hsl(8, 93%,
-    43%);
+    --text-red: hsl(8, 93%, 43%);
     --text-muted: hsl(26 35% 27%);
     --highlight: hsl(26 100% 99%);
     --border: hsl(26 21% 49%);
@@ -38,25 +37,21 @@
     --info: hsl(217 28% 65%);
     --info-hover: hsl(217 28% 75%); /* Set all the object colours here */
     --customer-background: hsl(203.53, 40.8%, 75.49%);
-    --customer-text: hsl(203.53,
-    40.8%, 24.51%);
+    --customer-text: hsl(203.53, 40.8%, 24.51%);
     --kanban-board-background: hsl(78.26, 88.46%, 89.8%);
     --kanban-board-text: hsl(78.26, 88.46%, 10.2%);
     --kanban-card-background: hsl(74.12, 35.56%, 53.14%);
     --kanban-card-text: hsl(74.12, 35.56%, 10.86%);
     --organisation-background: hsl(52.05, 85.57%, 61.96%);
     --organisation-text: hsl(52.05, 85.57%, 8.04%);
-    --request-for-change-background: hsl(67.61, 100%,
-    72.16%);
+    --request-for-change-background: hsl(67.61, 100%, 72.16%);
     --request-for-change-text: hsl(67.61, 100%, 7.84%);
     --requirement-background: hsl(200.31, 94.2%, 86.47%);
     --requirement-text: hsl(200.31, 94.2%, 10.53%);
-    --requirement-item-background: hsl(322.8, 29.76%,
-    67.06%);
+    --requirement-item-background: hsl(322.8, 29.76%, 67.06%);
     --requirement-item-text: hsl(322.8, 29.76%, 8.94%);
     --project-background: hsl(333.62, 49.57%, 45.88%);
-    --project-text: hsl(333.62,
-    49.57%, 8.12%);
+    --project-text: hsl(333.62, 49.57%, 8.12%);
     --task-background: hsl(224, 10.2%, 71.82%);
     --task-text: hsl(224, 10.2%, 7.18%);
 }

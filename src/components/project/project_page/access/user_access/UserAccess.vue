@@ -54,7 +54,6 @@ function removeUser(user_id: number) {
 
 <style scoped>
 .user-access {
-
 	> .user-access-list {
 		> .user-access-item {
 			padding: 0.5rem 0;
