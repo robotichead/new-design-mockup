@@ -34,7 +34,6 @@ defineProps({
 				<Trash />
 			</div>
 		</div>
-
 	</div>
 </template>
 
@@ -59,7 +58,6 @@ defineProps({
 				color: var(--document-links);
 
 				&:hover {
-					color: var(--document-links-hover);
 					fill: var(--document-links-hover);
 				}
 			}

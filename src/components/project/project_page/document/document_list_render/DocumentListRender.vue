@@ -6,7 +6,12 @@ import DocumentList from './document_list/DocumentList.vue';
 import FolderList from "@/components/project/project_page/document/document_list_render/folder_list/FolderList.vue";
 
 // Define ref
-const documentList = ref<DocumentItemInterface[]>([]);
+const documentList = ref<DocumentItemInterface[]>([
+	{ documentKey: "0000-0000-0000-0000", filename: "Book this hotel", type: "link"},
+	{ documentKey: "0000-0000-0000-0000", filename: "Pictures of Socks in a kimono.jpg", type: "image"},
+	{ documentKey: "0000-0000-0000-0000", filename: "Planning trip to Japan.docx", type: "text"},
+	{ documentKey: "0000-0000-0000-0000", filename: "Power point presentation of Socks in Japan", type: "powerpoint"},
+]);
 const folderList = ref<FolderItemInterface[]>([
 	{ folderId: 13, folderName: "Cat photos"},
 	{ folderId: 10, folderName: "Design specs"},
@@ -29,6 +34,7 @@ const folderList = ref<FolderItemInterface[]>([
 		/>
 		<DocumentList
 			v-if="documentList.length > 0"
+			:document-list="documentList"
 		/>
 	</div>
 </template>
