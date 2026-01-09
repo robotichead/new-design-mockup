@@ -36,6 +36,8 @@
     --success-hover: hsl(146 17% 69%);
     --info: hsl(217 28% 65%);
     --info-hover: hsl(217 28% 75%); /* Set all the object colours here */
+    --document-links: hsl(203.53, 40.8%, 24.51%);
+    --document-links-hover: hsl(203.53, 40.8%, 45.51%);
     --customer-background: hsl(203.53, 40.8%, 75.49%);
     --customer-text: hsl(203.53, 40.8%, 24.51%);
     --kanban-board-background: hsl(78.26, 88.46%, 89.8%);

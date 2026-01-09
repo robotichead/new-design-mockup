@@ -8,7 +8,10 @@ import FolderList from "@/components/project/project_page/document/document_list
 // Define ref
 const documentList = ref<DocumentItemInterface[]>([]);
 const folderList = ref<FolderItemInterface[]>([
-	{ folderId: 10, folderName: "Design specs"}
+	{ folderId: 13, folderName: "Cat photos"},
+	{ folderId: 10, folderName: "Design specs"},
+	{ folderId: 11, folderName: "User Flow Diagrams"},
+	{ folderId: 12, folderName: "User Stories"},
 ]);
 </script>
 
